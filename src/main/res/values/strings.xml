@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">AndroidMaster</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="altura">Altura</string>
+    <string name="weight">Peso</string>
+    <string name="descriptionPlaceHolder">TODO</string>
+    <string name="heightPlaceHolder">120 cm</string>
+    <string name="weightPlaceHolder">70</string>
+    <string name="agePlaceHolder">30</string>
+    <string name="AgePlaceHolder">Edad</string>
+    <string name="YourResult">Tu resultado</string>
+    <string name="LowWeight">Por debajo de lo óptimo para tu peso y altura</string>
+    <string name="OkWeight">En lo óptimo para tu peso y altura</string>
+    <string name="BadWeight">Por encima de lo óptimo para tu peso y altura</string>
+    <string name="VeryBadWeight">Muy por encima de lo óptimo para tu peso y altura</string>
+    <string name="ErrorWeight">Error al calcular tu IMC</string>
+    <string name="bienvenido">Tercera App: TODO</string>
+    <string name="categor_a">Categoría</string>
+    <string name="todo_list">TODO List</string>
+    <string name="tareas">Tareas</string>
+    <string name="nombre_de_la_tarea">Nombre de la tarea</string>
+    <string name="negocios">Negocios</string>
+    <string name="personal">Personal</string>
+    <string name="otros">Otros</string>
+    <string name="add_tarea">Añadir tarea</string>
+    <string name="notEmptyAllowed">El nombre de la tarea no puede ser vacio.</string>
+
+
+</resources>
