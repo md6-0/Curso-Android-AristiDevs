@@ -76,12 +76,12 @@ class ThirdAppActivity : AppCompatActivity() {
         fabAddTask.setOnClickListener { showDialog() }
     }
 
-    private fun onCategorySelected(position: Int){
+    private fun onCategorySelected(position: Int) {
         categories[position].isSelected = !categories[position].isSelected
         updateCategories(position)
     }
 
-    private fun onTaskSelected(position: Int){
+    private fun onTaskSelected(position: Int) {
         tasks[position].isSelected = !tasks[position].isSelected
         updateTasks()
     }
@@ -97,7 +97,7 @@ class ThirdAppActivity : AppCompatActivity() {
         btnAddTask.setOnClickListener {
             val currentTaskName = etTask.text.toString()
 
-            if(currentTaskName.isNotEmpty()){
+            if (currentTaskName.isNotEmpty()) {
                 val selectedId = rgCategories.checkedRadioButtonId
                 val selectedRadioButton: RadioButton = rgCategories.findViewById(selectedId)
                 val selectedCategory: Category = when (selectedRadioButton.text) {
@@ -105,28 +105,28 @@ class ThirdAppActivity : AppCompatActivity() {
                     getString(R.string.personal) -> Category.Personal
                     else -> Category.Other
                 }
-                tasks.add(Task(etTask.text.toString(),selectedCategory,false))
+                tasks.add(Task(etTask.text.toString(), selectedCategory, false))
                 updateTasks()
                 dialog.hide()
-            } else{
-                Toast.makeText(this, getString(R.string.notEmptyAllowed), Toast.LENGTH_SHORT).show() }
+            } else {
+                Toast.makeText(this, getString(R.string.notEmptyAllowed), Toast.LENGTH_SHORT).show()
+            }
 
         }
         dialog.show()
     }
 
-    private fun updateCategories(position: Int){
+    private fun updateCategories(position: Int) {
         categoriesAdapter.notifyItemChanged(position)
         updateTasks()
     }
 
-    private fun updateTasks(){
+    private fun updateTasks() {
         val selectedCategories: List<Category> = categories.filter { it.isSelected }
         val filteredTasks = tasks.filter { selectedCategories.contains(it.category) }
         taskAdapter.setTasks(filteredTasks)
         taskAdapter.notifyDataSetChanged()
     }
-
 
 
 }
